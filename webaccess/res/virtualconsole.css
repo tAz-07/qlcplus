@@ -1,4 +1,4 @@
-body { margin: 0px; }
+body { margin: 0px; background-color: black; }
 
 form {
  position: absolute;
@@ -323,7 +323,7 @@ input[type="range"]:disabled::-webkit-slider-thumb {
  font:normal 20px/1.2em sans-serif;
 }
 
-.vcatbutton-wrapper { position: absolute; }
+.vcatbutton-wrapper { position: absolute; background-color: rgb(214, 210, 208);  }
 
 .vcatbutton {
  display: table-cell;

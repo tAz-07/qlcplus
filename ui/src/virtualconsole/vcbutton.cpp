@@ -415,15 +415,10 @@ void VCButton::notifyFunctionStarting(quint32 fid, qreal intensity)
     if (mode() == Doc::Design)
         return;
 
-    if (fid == m_function || m_function == Function::invalidId())
+    if (fid == m_function)
         return;
 
-    // stop the controlled Function only
-    // if actively started by this Button
-    if (m_state != Active)
-        return;
-
-    if (action() == VCButton::Toggle)
+    if (m_function != Function::invalidId() && action() == VCButton::Toggle)
     {
         Function *f = m_doc->function(m_function);
         if (f != NULL)
